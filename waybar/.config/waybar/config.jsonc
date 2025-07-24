@@ -2,8 +2,8 @@
   "layer": "top",
   "position": "top",
   "margin-top": 6,
-  "modules-left": ["clock", "custom/weather"],
-  "modules-center": ["hyprland/workspaces", "custom/media"],
+  "modules-left": ["hyprland/workspaces", "custom/weather"],
+  "modules-center": ["clock", "custom/media"],
   "modules-right": ["pulseaudio", "battery", "network"],
 
   "custom/pacman": {
