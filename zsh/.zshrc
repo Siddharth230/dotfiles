@@ -127,7 +127,7 @@ alias pnb="pnpm run build"
 
 alias pnl="pnpm run lint"
 
-alias mongors-start="~/start-replica.sh"
+# alias mongors-start="~/start-replica.sh"
 
 PATH=~/.console-ninja/.bin:$PATH
 # Created by `pipx` on 2025-06-01 11:39:50

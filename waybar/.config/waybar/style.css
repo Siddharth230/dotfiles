@@ -1,167 +1,79 @@
+@import url("/home/siddharth/.cache/wal/colors-waybar.css");
+
 * {
-  border: none;
-  border-radius: 0;
-  font-family: "JetBrainsMono Nerd Font";
+  font-family: "Radio Canada Big", sans-serif;
   font-weight: bold;
   font-size: 16px;
-  min-height: 0;
+  border-radius: 10px;
 }
 
 window#waybar {
-  background: rgba(21, 18, 27, 0);
-  color: #cdd6f4;
-}
-
-tooltip {
-  background: #1e1e2e;
-  border-radius: 10px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #11111b;
-}
-
-#workspaces button {
-  padding: 5px;
-  color: #636777;
-  margin-right: 5px;
+  background-color: transparent;
+  color: @background;
 }
 
 #workspaces button.active {
-  background-color: #000;
-}
-
-#workspaces button.focused {
-  color: #a6adc8;
-  background: #eba0ac;
-  border-radius: 10px;
-}
-
-#workspaces button.urgent {
-  color: #11111b;
-  background: #a6e3a1;
-  border-radius: 10px;
-}
-
-#workspaces button:hover {
-  background: #11111b;
-  color: #11111b;
-  border-radius: 5px;
-}
-
-#custom-power_profile,
-#custom-weather,
-#custom-moon,
-#custom-wallpaper,
-#window,
-#clock,
-#battery,
-#pipewire,
-#network,
-#bluetooth,
-#custom-temperature,
-#custom-memory,
-#workspaces,
-#tray,
-#backlight {
-  background: #1e1e2e;
-  opacity: 0.8;
-  padding: 0px 10px;
-  /* margin: 3px 0px; */
-  margin: 0px 0px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  border: 1px solid #181825;
-}
-
-#custom-memory {
-  color: #eba0ac;
-}
-
-#custom-temperature {
-  border-radius: 10px 0px 0px 10px;
-}
-
-#custom-temperature.critical {
-  color: #f00;
-}
-
-#backlight {
-  border-radius: 10px 0px 0px 10px;
-}
-
-#tray {
-  border-radius: 10px;
-  margin-right: 10px;
+  color: @foreground;
 }
 
 #workspaces {
-  background: #1e1e2e;
-  border-radius: 10px;
-  margin-left: 10px;
-  padding-right: 0px;
-  padding-left: 5px;
+  background-color: @background;
+  padding: 0 5.6px 0 0;
 }
 
-#custom-power_profile {
-  color: #a6e3a1;
-  border-left: 0px;
-  border-right: 0px;
+.modules-left {
+  margin-left: 12px;
 }
 
-#window {
-  border-radius: 10px;
-  margin-left: 60px;
-  margin-right: 60px;
+.modules-right {
+  margin-right: 12px;
 }
 
-#clock {
-  color: #fab387;
-  border-radius: 10px 0px 0px 10px;
-  margin-left: 10px;
-  border-right: 0px;
+#battery,
+#pulseaudio,
+#backlight,
+#custom-weather {
+  color: @color5; /* color5 */
+  background-color: @background; /* background */
+  margin: 0 15px 0 0px;
+  padding: 0 15px 0 15px; /* top, right, bottom, left */
 }
 
 #network {
-  color: #f9e2af;
-  border-radius: 10px 0px 0px 10px;
-  border-left: 0px;
-  border-right: 0px;
+  color: @color2; /* color2 */
+  background-color: @background; /* background */
+  margin: 0 0px 0 0px;
+  padding: 0 15px 0 15px; /* top, right, bottom, left */
 }
 
-#bluetooth {
-  color: #89b4fa;
-  border-radius: 0px 10px 10px 0px;
-  margin-right: 10px;
+#clock {
+  color: @color3; /* color3 */
+  background-color: @background; /* background */
+  margin: 0 15px 0 0;
+  padding: 0 15px 0 15px;
 }
 
-#pipewire {
-  color: #89b4fa;
-  border-left: 0px;
-  border-right: 0px;
+#network {
+  color: @color4; /* color4 */
 }
 
-#pipewire.microphone {
-  color: #cba6f7;
-  border-left: 0px;
-  border-right: 0px;
-  border-radius: 0px 10px 10px 0px;
-  margin-right: 10px;
+#pulseaudio {
+  color: @color5; /* color5 */
 }
 
-#battery {
-  color: #a6e3a1;
-  border-radius: 0 10px 10px 0;
-  margin-right: 10px;
-  border-left: 0px;
+#backlight {
+  color: @color5; /* color5 */
 }
-#battery.warning {
-  color: #ffa500;
+
+#custom-weather {
+  color: @color4; /* color2 */
+  background-color: @background; /* background */
+  padding: 0 15px 0 15px; /* top, right, bottom, left */
 }
-#battery.critical {
-  color: #f00;
-}
-#custom-moon {
-  border-radius: 0px 10px 10px 0px;
-  border-right: 0px;
-  margin-left: 0px;
+
+#custom-media {
+  color: @color4; /* color2 */
+  background-color: @background; /* background */
+  margin: 0 0px 0 15px;
+  padding: 0 15px 0 15px; /* top, right, bottom, left */
 }
