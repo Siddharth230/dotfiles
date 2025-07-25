@@ -2,8 +2,8 @@
   "layer": "top",
   "position": "top",
   "margin-top": 6,
-  "modules-left": ["hyprland/workspaces", "custom/weather"],
-  "modules-center": ["clock", "custom/media"],
+  "modules-left": ["hyprland/workspaces", "custom/weather", "custom/media"],
+  "modules-center": ["clock"],
   "modules-right": ["pulseaudio", "battery", "network"],
 
   "custom/pacman": {
@@ -15,7 +15,7 @@
   },
 
   "custom/media": {
-    "format": "{icon}{}",
+    "format": "{icon}{text}",
     "escape": true,
     "return-type": "json",
     "max-length": 40,
@@ -24,7 +24,7 @@
     "smooth-scrolling-threshold": 10, // This value was tested using a trackpad, it should be lowered if using a mouse.
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous",
-    "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources/custom_modules folder
+    "exec": "$HOME/.config/waybar/scripts/mediaplayer.py" // Script in resources/custom_modules folder
   },
 
   "battery": {
@@ -85,7 +85,7 @@
   },
 
   "custom/weather": {
-    "exec": "${HOME}/.config/waybar/scripts/get_weather.sh Pune+India",
+    "exec": "${HOME}/.config/waybar/scripts/get_weather.sh",
     "return-type": "json",
     "format": "{}",
     "tooltip": true,
