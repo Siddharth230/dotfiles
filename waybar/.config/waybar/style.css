@@ -78,3 +78,10 @@ window#waybar {
   margin: 0 15px 0 0px;
   padding: 0 15px 0 15px; /* top, right, bottom, left */
 }
+
+#custom-kdeconnect {
+  color: @color4;
+  background-color: @background;
+  margin: 0 15px 0 0px;
+  padding: 0 15px 0 15px;
+}

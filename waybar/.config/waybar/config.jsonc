@@ -4,7 +4,7 @@
   "margin-top": 6,
   "modules-left": ["hyprland/workspaces", "custom/weather", "custom/media"],
   "modules-center": ["clock"],
-  "modules-right": ["pulseaudio", "battery", "network"],
+  "modules-right": ["custom/kdeconnect", "pulseaudio", "battery", "network"],
 
   "custom/pacman": {
     "format": " {}   ",
