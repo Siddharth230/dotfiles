@@ -1,87 +1,169 @@
-@import url("/home/siddharth/.cache/wal/colors-waybar.css");
+@import url("../../.cache/wal/colors-waybar.css");
 
 * {
-  font-family: "Radio Canada Big", sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  border-radius: 10px;
+  font-size: 15px;
+  font-family: "CodeNewRoman Nerd Font Propo";
 }
-
 window#waybar {
-  background-color: transparent;
-  color: @background;
+  all: unset;
 }
-
-#workspaces button.active {
-  color: @foreground;
-}
-
-#workspaces {
-  background-color: @background;
-  margin: 0 15px 0 0;
-  padding: 0 5.6px 0 0;
-}
-
 .modules-left {
-  margin-left: 12px;
+  padding: 7px;
+  margin: 10 0 5 10;
+  border-radius: 10px;
+  background: alpha(@background, 0.6);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
 }
-
+.modules-center {
+  padding: 7px;
+  margin: 10 0 5 0;
+  border-radius: 10px;
+  background: alpha(@background, 0.6);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+}
 .modules-right {
-  margin-right: 12px;
+  padding: 7px;
+  margin: 10 10 5 0;
+  border-radius: 10px;
+  background: alpha(@background, 0.6);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
 }
-
-#battery,
-#pulseaudio,
-#backlight,
-#custom-weather {
-  color: @color5; /* color5 */
-  background-color: @background; /* background */
-  margin: 0 15px 0 0px;
-  padding: 0 15px 0 15px; /* top, right, bottom, left */
+tooltip {
+  background: @background;
+  color: @color7;
 }
-
-#network {
-  color: @color2; /* color2 */
-  background-color: @background; /* background */
-  margin: 0 0px 0 0px;
-  padding: 0 15px 0 15px; /* top, right, bottom, left */
+#clock:hover,
+#custom-pacman:hover,
+#custom-notification:hover,
+#bluetooth:hover,
+#network:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#temperature:hover {
+  transition: all 0.3s ease;
+  color: @color9;
 }
-
+#custom-notification {
+  padding: 0px 5px;
+  transition: all 0.3s ease;
+  color: @color7;
+}
 #clock {
-  color: @color3; /* color3 */
-  background-color: @background; /* background */
-  /* margin: 0 15px 0 0; */
-  padding: 0 15px 0 15px;
+  padding: 0px 5px;
+  color: @color7;
+  transition: all 0.3s ease;
 }
-
+#custom-pacman {
+  padding: 0px 5px;
+  transition: all 0.3s ease;
+  color: @color7;
+}
+#workspaces {
+  padding: 0px 5px;
+}
+#workspaces button {
+  all: unset;
+  padding: 0px 5px;
+  color: alpha(@color9, 0.4);
+  transition: all 0.2s ease;
+}
+#workspaces button:hover {
+  color: rgba(0, 0, 0, 0);
+  border: none;
+  text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 0.5);
+  transition: all 1s ease;
+}
+#workspaces button.active {
+  color: @color9;
+  border: none;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+#workspaces button.empty {
+  color: rgba(0, 0, 0, 0);
+  border: none;
+  text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 0.2);
+}
+#workspaces button.empty:hover {
+  color: rgba(0, 0, 0, 0);
+  border: none;
+  text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 0.5);
+  transition: all 1s ease;
+}
+#workspaces button.empty.active {
+  color: @color9;
+  border: none;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+#bluetooth {
+  padding: 0px 5px;
+  transition: all 0.3s ease;
+  color: @color7;
+}
 #network {
-  color: @color4; /* color4 */
+  padding: 0px 5px;
+  transition: all 0.3s ease;
+  color: @color7;
+}
+#battery {
+  padding: 0px 5px;
+  transition: all 0.3s ease;
+  color: @color7;
+}
+#battery.charging {
+  color: #26a65b;
 }
 
-#pulseaudio {
-  color: @color5; /* color5 */
+#battery.warning:not(.charging) {
+  color: #ffbe61;
 }
 
-#backlight {
-  color: @color5; /* color5 */
+#battery.critical:not(.charging) {
+  color: #f53c3c;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#group-expand {
+  padding: 0px 5px;
+  transition: all 0.3s ease;
+}
+#custom-expand {
+  padding: 0px 5px;
+  color: alpha(@foreground, 0.2);
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+}
+#custom-expand:hover {
+  color: rgba(255, 255, 255, 0.2);
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+}
+#custom-colorpicker {
+  padding: 0px 5px;
+}
+#cpu,
+#memory,
+#temperature {
+  padding: 0px 5px;
+  transition: all 0.3s ease;
+  color: @color7;
+}
+#custom-endpoint {
+  color: transparent;
+  text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 1);
+}
+#tray {
+  padding: 0px 5px;
+  transition: all 0.3s ease;
+}
+#tray menu * {
+  padding: 0px 5px;
+  transition: all 0.3s ease;
 }
 
-#custom-weather {
-  color: @color4; /* color2 */
-  background-color: @background; /* background */
-  padding: 0 15px 0 15px; /* top, right, bottom, left */
-}
-
-#custom-media {
-  color: @color4; /* color2 */
-  background-color: @background; /* background */
-  margin: 0 15px 0 0px;
-  padding: 0 15px 0 15px; /* top, right, bottom, left */
-}
-
-#custom-kdeconnect {
-  color: @color4;
-  background-color: @background;
-  margin: 0 15px 0 0px;
-  padding: 0 15px 0 15px;
+#tray menu separator {
+  padding: 0px 5px;
+  transition: all 0.3s ease;
 }
