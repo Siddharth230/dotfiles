@@ -144,4 +144,4 @@ export TERM=xterm-256color
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Load pywal colors in terminal
-[ -f "$HOME/.cache/wal/sequences" ] && cat "$HOME/.cache/wal/sequences"
+[ -f "$HOME/.cache/wal/sequences" ] && cat "$HOME/.cache/wal/sequences"source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
