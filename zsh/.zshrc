@@ -146,11 +146,20 @@ export TERM=xterm-256color
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # Load pywal colors in terminal
-if [[ -f "$HOME/.cache/wal/sequences" ]]; then
-  cat "$HOME/.cache/wal/sequences"
-fi
-
-# Run fastfetch, but not in VS Code's integrated terminal
 if [[ "$TERM_PROGRAM" != "vscode" ]]; then
-  fastfetch
+  
+  # Load pywal colors
+  if [[ -f "$HOME/.cache/wal/sequences" ]]; then
+    cat "$HOME/.cache/wal/sequences"
+  fi
+  
+  # # Give colors a moment to apply
+  # sleep 0.1
+
+  # # --- THIS IS THE FIX ---
+  # # Clear the screen *after* colors are set, but *before* fastfetch runs
+  # clear
+
+  # # Run fastfetch
+  # fastfetch
 fi
