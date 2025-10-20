@@ -33,6 +33,7 @@ tooltip {
   color: @color7;
 }
 #clock:hover,
+#power-profiles-daemon:hover,
 #custom-pacman:hover,
 #custom-notification:hover,
 #bluetooth:hover,
