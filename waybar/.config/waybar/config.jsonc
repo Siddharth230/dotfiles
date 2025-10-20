@@ -2,7 +2,13 @@
   "layer": "top",
   "position": "top",
   "reload_style_on_change": true,
-  "modules-left": ["custom/notification", "clock", "custom/pacman", "tray"],
+  "modules-left": [
+    "custom/notification",
+    "clock",
+    "power-profiles-daemon",
+    "custom/pacman",
+    "tray"
+  ],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": ["group/expand", "bluetooth", "network", "battery"],
   "hyprland/workspaces": {
@@ -25,15 +31,30 @@
   "clock": {
     "format": "{:%I:%M:%S %p} ",
     "interval": 1,
-    "tooltip-format": "<tt>{calendar}</tt>",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "format": {
+        "months": "<span color='#ffffff'><b>{}</b></span>",
+        "days": "<span color='#a2a5a8'><b>{}</b></span>",
+        "weeks": "<span color='#a2a5a8'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffffff'><b>{}</b></span>",
         "today": "<span color='#fAfBfC'><b>{}</b></span>"
       }
     },
     "actions": {
       "on-click-right": "shift_down",
       "on-click": "shift_up"
+    }
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "{profile}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
     }
   },
   "network": {
