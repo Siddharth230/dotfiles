@@ -40,8 +40,7 @@ tooltip {
 #network:hover,
 #battery:hover,
 #cpu:hover,
-#memory:hover,
-#temperature:hover {
+#memory:hover {
   transition: all 0.3s ease;
   color: @color9;
 }
@@ -150,8 +149,7 @@ tooltip {
   padding: 0px 5px;
 }
 #cpu,
-#memory,
-#temperature {
+#memory {
   padding: 0px 5px;
   transition: all 0.3s ease;
   color: @color7;

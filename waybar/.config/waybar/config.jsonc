@@ -19,7 +19,8 @@
       "empty": ""
     },
     "persistent-workspaces": {
-      "*": [1, 2, 3, 4, 5]
+      "eDP-1": [1, 2, 3, 4, 5],
+      "HDMI-A-1": [6, 7, 8, 9, 10]
     }
   },
   "custom/notification": {
@@ -120,7 +121,6 @@
       "custom/colorpicker",
       "cpu",
       "memory",
-      // "temperature",
       "custom/endpoint"
     ]
   },
@@ -141,10 +141,6 @@
     "interval": 1,
     "format": "{used:0.2f}G "
   },
-  // "temperature": {
-  //   "critical-threshold": 80,
-  //   "format": ""
-  // },
   "tray": {
     "icon-size": 14,
     "spacing": 12
