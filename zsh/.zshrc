@@ -131,6 +131,18 @@ alias pnb="pnpm run build"
 
 alias pnl="pnpm run lint"
 
+function y() {
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+  yazi "$@" --cwd-file="$tmp"
+  if [ -n "$tmp" ] && [ -f "$tmp" ]; then
+    local cwd="$(cat "$tmp")"
+    rm -f "$tmp"
+    if [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+      cd "$cwd"
+    fi
+  fi
+}
+
 # alias mongors-start="~/start-replica.sh"
 
 PATH=~/.console-ninja/.bin:$PATH
