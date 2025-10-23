@@ -68,7 +68,6 @@
           "command": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
           "type": "toggle"
         },
-
         {
           "label": "",
           "command": "ghostty nmtui"
@@ -82,7 +81,6 @@
           "command": "swaync-client -d",
           "type": "toggle"
         },
-
         {
           "label": "󰀟",
           "command": "gnome-network-displays"
