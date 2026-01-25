@@ -70,7 +70,7 @@
         },
         {
           "label": "",
-          "command": "ghostty nmtui"
+          "command": "kitty nmtui"
         },
         {
           "label": "",
@@ -87,15 +87,15 @@
         },
         {
           "label": "󰈙",
-          "command": "ghostty zsh -i -c 'Docs'"
+          "command": "kitty zsh -i -c 'Docs'"
         },
         {
           "label": "",
-          "command": "ghostty zsh -i -c 'Settings'"
+          "command": "kitty zsh -i -c 'Settings'"
         },
         {
           "label": "",
-          "command": "ghostty zsh -i -c 'tasks'"
+          "command": "kitty zsh -i -c 'tasks'"
         },
         {
           "label": "",

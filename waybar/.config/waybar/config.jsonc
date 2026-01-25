@@ -18,7 +18,7 @@
       "default": "",
       "empty": ""
     },
-    "persistent-workspaces": { 
+    "persistent-workspaces": {
       "eDP-1": [1, 2, 3, 4, 5],
       "HDMI-A-1": [6, 7, 8, 9, 10]
     }
@@ -47,17 +47,17 @@
       "on-click": "shift_up"
     }
   },
-  "power-profiles-daemon": {
-    "format": "{icon}",
-    "tooltip-format": "{profile}",
-    "tooltip": true,
-    "format-icons": {
-      "default": "",
-      "performance": "",
-      "balanced": "",
-      "power-saver": ""
-    }
-  },
+  // "power-profiles-daemon": {
+  //   "format": "{icon}",
+  //   "tooltip-format": "{profile}",
+  //   "tooltip": true,
+  //   "format-icons": {
+  //     "default": "",
+  //     "performance": "",
+  //     "balanced": "",
+  //     "power-saver": ""
+  //   }
+  // },
   "network": {
     "format-wifi": "",
     "format-ethernet": "",
@@ -97,7 +97,7 @@
     "interval": 30,
     "exec": "checkupdates | wc -l",
     "exec-if": "exit 0",
-    "on-click": "ghostty -e sh -c 'yay -Syu; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar",
+    "on-click": "ghostty -e sh -c 'sudo pacman -Syu && yay -Syu; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar",
     "signal": 8,
     "tooltip": false
   },
