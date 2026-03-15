@@ -21,4 +21,3 @@ main() {
     source ~/.cache/wal/colors.sh && cp -r $wallpaper ~/wallpapers/pywallpaper.jpg 
 }
 main
-
