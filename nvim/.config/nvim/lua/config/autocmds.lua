@@ -12,3 +12,27 @@ vim.api.nvim_create_autocmd("VimLeavePre", {
     vim.cmd("wa")
   end,
 })
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  callback = function()
+    local bufs = vim.fn.getbufinfo({ buflisted = 1 })
+
+    -- Only act if more than 1 buffer
+    if #bufs <= 1 then
+      return
+    end
+
+    local current = vim.api.nvim_get_current_buf()
+
+    for _, buf in ipairs(bufs) do
+      if buf.bufnr ~= current then
+        -- If buffer is NOT modified → delete it
+        if not buf.changed then
+          vim.schedule(function()
+            pcall(vim.api.nvim_buf_delete, buf.bufnr, { force = false })
+          end)
+        end
+      end
+    end
+  end,
+})

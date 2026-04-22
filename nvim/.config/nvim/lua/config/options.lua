@@ -4,7 +4,7 @@
 local opt = vim.opt
 
 opt.number = true
-opt.relativenumber = false
+-- -- -- -- -- -- -- -- -- opt.relativenumber = false
 -- Autowrite
 opt.autowrite = true
 opt.autowriteall = true
