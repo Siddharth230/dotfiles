@@ -2,7 +2,7 @@ return {
   "stevearc/conform.nvim",
   opts = {
     formatters_by_ft = {
-      python = { "isort", "black" },
+      python = { "black" },
       sql = { "sql_formatter" },
       javascript = { "prettier" },
       typescript = { "prettier" },
@@ -14,7 +14,7 @@ return {
       json = { "prettier" },
       yaml = { "prettier" },
       markdown = { "prettier" },
-      c = { "clang_format " },
+      c = { "clang_format" },
       cpp = { "clang_format" },
     },
     formatters = {

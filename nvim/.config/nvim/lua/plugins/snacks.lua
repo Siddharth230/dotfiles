@@ -20,6 +20,8 @@ return {
       layout = "select",
       sources = {
         explorer = {
+          hidden = true,
+          ignored = true,
           auto_close = true,
         },
       },
